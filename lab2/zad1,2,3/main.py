@@ -1,13 +1,9 @@
 from typing import Any
-
 import int as Int
-
-
 class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
-
 
 class LinkedList:
     def __init__(self, node=None):
@@ -52,7 +48,7 @@ class LinkedList:
 
     def insert(self, value: Any, after: Node):
         if after == None:
-            print("Podano wezel spoza listy")
+            print("wezly z poza listy")
             return
         node = Node(value)
         node.next = after.next
@@ -61,10 +57,10 @@ class LinkedList:
     def remove(self, after: Node):
         if after != None:
             if after.next == None:
-                print("probujesz usunac node z konca")
+                print("nie usuniesz node z konca")
                 return
         if after == None:
-            print("probujesz usunac node spoza listy")
+            print("usuwasz node z poza listy")
             return
         node = self.head
         while node != after:
@@ -166,28 +162,15 @@ class Queue:
 
         return count
 
-
-
 # stack = Stack()
-#
 # stack.push(1)
 # stack.push(2)
 # stack.push(3)
 # stack.push(4)
 # stack.push(5)
-#
-#
 # stack.print()
 # print(stack.pop().value,"\n")
 # print(stack.len())
-
-
-
-
-
-
-
-
 # list_ = LinkedList()
 # node = Node(3)
 # list_.head == None
@@ -201,13 +184,14 @@ class Queue:
 # print(list_.remove_last().value)
 # list_.remove(list_.node(0))
 # list_.travel()
+
 queue = Queue()
-queue.enqueue("cos1")
-queue.enqueue("cos2")
-queue.enqueue("Cecyl")
-queue.enqueue("Dariusz")
-queue.enqueue("Eugeniusz")
-queue.enqueue("Fryderyk")
+queue.enqueue("klient1")
+queue.enqueue("klient2")
+queue.enqueue("klient3")
+queue.enqueue("klient4")
+queue.enqueue("klient5")
+queue.enqueue("klient6")
 print(queue.len())
 print(queue.peek().value)
 queue.dequeue()
